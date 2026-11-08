@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VerebusEnterprise // 16 Executive & Motivation Subscription Streams</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
+            color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 28px 16px;
+        }
+        .card {
+            max-width: 600px; width: 100%; background: #1e293b;
+            border: 1px solid #334155; border-top: 4px solid #0ea5e9;
+            border-radius: 12px; padding: 38px 34px; box-shadow: 0 24px 48px rgba(0,0,0,0.5);
+        }
+        .eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 2px; color: #38bdf8; text-transform: uppercase; }
+        h1 { font-size: 26px; margin: 10px 0 12px; line-height: 1.3; color: #fff; }
+        p.lead { font-size: 15px; line-height: 1.65; color: #cbd5e1; margin-bottom: 22px; }
+        .persona-pill {
+            background: #0f172a; border: 1px solid #334155; border-left: 3px solid #10b981;
+            padding: 12px 14px; border-radius: 6px; margin-bottom: 18px; font-size: 13px; color: #94a3b8;
+        }
+        label { display: block; font-size: 11.5px; font-weight: 700; color: #94a3b8; margin-bottom: 6px; letter-spacing: 0.8px; text-transform: uppercase; }
+        input, select {
+            width: 100%; padding: 13px 14px; margin-bottom: 14px;
+            background: #0f172a; border: 1px solid #475569; border-radius: 6px;
+            color: #fff; font-size: 14px; outline: none;
+        }
+        input:focus, select:focus { border-color: #38bdf8; }
+        .btn {
+            width: 100%; padding: 14px; border: none; border-radius: 6px;
+            background: #0ea5e9; color: #0f172a; font-weight: 800; font-size: 14px;
+            cursor: pointer; letter-spacing: 0.5px; margin-bottom: 10px; transition: background 0.15s;
+        }
+        .btn:hover { background: #38bdf8; }
+        .btn-sub {
+            display: block; text-align: center; text-decoration: none;
+            width: 100%; padding: 13px; border: 1px solid #10b981; border-radius: 6px;
+            color: #10b981; font-weight: 700; font-size: 13.5px; margin-bottom: 16px;
+        }
+        .btn-sub:hover { background: rgba(16, 185, 129, 0.12); }
+        #join-msg { margin-top: 8px; margin-bottom: 14px; font-size: 13.5px; color: #34d399; font-weight: 600; line-height: 1.5; }
+        .policy-footer {
+            margin-top: 22px; padding-top: 16px; border-top: 1px solid #334155;
+            font-size: 11.5px; color: #64748b; line-height: 1.6;
+        }
+        .unsub-box {
+            margin-top: 12px; padding: 10px 12px; background: rgba(15, 23, 42, 0.7);
+            border: 1px dashed #475569; border-radius: 6px; display: flex; gap: 8px; align-items: center;
+        }
+        .unsub-box input { margin-bottom: 0; padding: 8px 10px; font-size: 12px; }
+        .unsub-btn {
+            padding: 8px 12px; background: transparent; border: 1px solid #f43f5e;
+            color: #f43f5e; border-radius: 4px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="eyebrow">The VerebusEnterprise Executive Division</div>
+        <h1>16 Specialized Daily Briefings</h1>
+        <p class="lead">Select your focus stream below to receive a <strong>one-time complimentary sample issue</strong> delivered directly to your inbox—or activate your daily subscription immediately via Stripe.</p>
+
+        <label>1. Choose Your Daily Subscription Stream (16 Available)</label>
+        <select id="j-stream" onchange="updateStreamDetails()">
+            <option value="SUB-01-MORNING" data-price="5.00" data-stripe="https://buy.stripe.com/14A00j9M6dSn4EnggLeUU0h" data-persona="Morning motivation seekers, early risers &amp; self-improvement communities">SUB-01-MORNING — The 6 AM Morning Momentum &amp; Daily Affirmation Brief (£5.00/mo)</option>
+<option value="SUB-02-COACHES" data-price="9.00" data-stripe="https://buy.stripe.com/28EdR92jEcOj9YH5C7eUU0i" data-persona="Life coaches, business coaches, executive mentors &amp; consultants">SUB-02-COACHES — The Executive &amp; Life Coach Client-Mastery Digest (£9.00/mo)</option>
+<option value="SUB-03-STUDENTS" data-price="4.00" data-stripe="https://buy.stripe.com/eVq14n1fA4hNeeX9SneUU0j" data-persona="University students, medical/law students &amp; academic societies">SUB-03-STUDENTS — High-GPA Study Systems, Active Recall &amp; Exam Focus (£4.00/mo)</option>
+<option value="SUB-04-OFFICE" data-price="5.00" data-stripe="https://buy.stripe.com/bJe3cv5vQ8y33Aje8DeUU0k" data-persona="Office professionals, analysts, project managers &amp; corporate teams">SUB-04-OFFICE — Corporate Career Leverage &amp; 9-to-5 Executive Presence (£5.00/mo)</option>
+<option value="SUB-05-FITNESS" data-price="6.00" data-stripe="https://buy.stripe.com/cNi6oHf6q7tZ3AjggLeUU0l" data-persona="Personal trainers, gym owners, strength coaches &amp; fitness enthusiasts">SUB-05-FITNESS — Peak Physical Conditioning, Strength &amp; Recovery Protocol (£6.00/mo)</option>
+<option value="SUB-06-BOOKS" data-price="5.00" data-stripe="https://buy.stripe.com/00w5kD5vQ7tZdaT2pVeUU0m" data-persona="Book clubs, avid readers, strategists &amp; lifelong learners">SUB-06-BOOKS — Distilled Non-Fiction Principles &amp; Mental Models Digest (£5.00/mo)</option>
+<option value="SUB-07-HALAL-WEALTH" data-price="10.00" data-stripe="" data-persona="Ethical investors, halal finance professionals &amp; wealth builders">SUB-07-HALAL-WEALTH — Halal Wealth, Ethical Capital &amp; Asset-Building Brief (£10.00/mo)</option>
+<option value="SUB-08-FOUNDERS" data-price="9.00" data-stripe="" data-persona="Solopreneurs, agency owners, freelancers &amp; indie founders">SUB-08-FOUNDERS — Solo Founder &amp; Micro-Business Revenue Playbook (£9.00/mo)</option>
+<option value="SUB-09-DEEPWORK" data-price="5.00" data-stripe="" data-persona="Remote workers, software engineers, researchers &amp; writers">SUB-09-DEEPWORK — Distraction-Free Deep Work &amp; Digital Minimalism (£5.00/mo)</option>
+<option value="SUB-10-RESILIENCE" data-price="5.00" data-stripe="" data-persona="High-pressure professionals, emergency/medical staff &amp; executives">SUB-10-RESILIENCE — Calm Under Pressure &amp; Stoic Emotional Grit Digest (£5.00/mo)</option>
+<option value="SUB-11-SALES" data-price="8.00" data-stripe="" data-persona="B2B sales reps, account executives, closers &amp; agency directors">SUB-11-SALES — High-Trust B2B Persuasion &amp; Consultative Closing (£8.00/mo)</option>
+<option value="SUB-12-NUTRITION" data-price="6.00" data-stripe="" data-persona="Nutritionists, wellness coaches, health clinics &amp; busy parents">SUB-12-NUTRITION — Clean Halal Nutrition, Metabolic Energy &amp; Fasting Focus (£6.00/mo)</option>
+<option value="SUB-13-LEADERSHIP" data-price="8.00" data-stripe="" data-persona="CEOs, directors, school heads &amp; team managers">SUB-13-LEADERSHIP — Executive Leadership, Delegation &amp; Team Culture Brief (£8.00/mo)</option>
+<option value="SUB-14-CREATORS" data-price="7.00" data-stripe="" data-persona="Newsletter writers, YouTubers, podcasters &amp; digital educators">SUB-14-CREATORS — Digital Creator Systems, Writing &amp; Audience Growth (£7.00/mo)</option>
+<option value="SUB-15-FINANCE" data-price="5.00" data-stripe="" data-persona="Young professionals, families &amp; financial literacy educators">SUB-15-FINANCE — Personal Cashflow, Zero-Debt Living &amp; Smart Budgeting (£5.00/mo)</option>
+<option value="SUB-16-COMMUNICATION" data-price="6.00" data-stripe="" data-persona="Public speakers, lawyers, consultants &amp; ambitious professionals">SUB-16-COMMUNICATION — Articulate Speaking, Executive Writing &amp; Negotiation (£6.00/mo)</option>
+        </select>
+
+        <div class="persona-pill" id="persona-display">
+            <strong>Designed For:</strong> Morning motivation seekers, early risers &amp; self-improvement communities (1-Time Free Sample Available)
+        </div>
+
+        <label>2. Enter Your Details For Your 1-Time Complimentary Sample Issue</label>
+        <input type="text" id="j-name" placeholder="Your First Name" />
+        <input type="email" id="j-email" placeholder="Your Best Email Address" />
+
+        <button class="btn" onclick="submitSampleRequest()">EMAIL ME MY 1-TIME FREE SAMPLE ISSUE →</button>
+        <a id="stripe-direct-btn" href="#" target="_blank" class="btn-sub">OR SUBSCRIBE DIRECTLY VIA STRIPE (£5.00 / MONTH)</a>
+
+        <div id="join-msg"></div>
+
+        <div class="policy-footer">
+            <strong>Strict One-Sample &amp; No-Refund Policy:</strong> Each email address is limited to one complimentary sample issue. If you choose to subscribe, you may cancel at any time to stop future monthly billing; however, <strong>all processed subscription payments are final and non-refundable</strong>.<br>
+            <div class="unsub-box">
+                <input type="email" id="unsub-email" placeholder="Enter email to opt out of mailing list..." />
+                <button class="unsub-btn" onclick="submitUnsubscribe()">REMOVE FROM LIST</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateStreamDetails() {
+            const sel = document.getElementById('j-stream');
+            const opt = sel.options[sel.selectedIndex];
+            const price = opt.getAttribute('data-price') || '5.00';
+            const stripe = opt.getAttribute('data-stripe') || '#';
+            const persona = opt.getAttribute('data-persona') || '';
+            document.getElementById('persona-display').innerHTML =
+                `<strong>Designed For:</strong> ${persona} &nbsp;|&nbsp; <strong>Tier:</strong> £${price} GBP / month`;
+            const btn = document.getElementById('stripe-direct-btn');
+            btn.innerText = `OR SUBSCRIBE DIRECTLY VIA STRIPE (£${price} / MONTH)`;
+            if (stripe && stripe.startsWith('http')) {
+                btn.href = stripe;
+            }
+        }
+
+        function submitSampleRequest() {
+            const name = document.getElementById('j-name').value.trim();
+            const email = document.getElementById('j-email').value.trim().toLowerCase();
+            const stream = document.getElementById('j-stream').value;
+            const msgEl = document.getElementById('join-msg');
+            if (!email || !email.includes('@')) {
+                msgEl.style.color = '#f43f5e';
+                msgEl.innerText = 'Please enter a valid email address.';
+                return;
+            }
+
+            // Client-side guard + server-side lock against repeated free sample abuse
+            const claimKey = 'verebus_sample_' + stream + '_' + email;
+            if (localStorage.getItem(claimKey)) {
+                msgEl.style.color = '#fbbf24';
+                msgEl.innerText = 'You have already claimed your 1-time free sample for ' + stream + '. Click the green Stripe button above to subscribe for daily issues!';
+                return;
+            }
+
+            msgEl.style.color = '#34d399';
+            msgEl.innerText = 'Dispatching your 1-time complimentary sample issue to ' + email + '...';
+
+            // Works both when hosted locally on Monday OS AND when hosted publicly on GitHub Pages!
+            if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
+                fetch('/enterprise_api/public_subscribe', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({name: name, email: email, stream_id: stream})
+                }).then(r => r.json()).then(d => {
+                    if (d.ok) localStorage.setItem(claimKey, '1');
+                    msgEl.style.color = d.ok ? '#34d399' : '#fbbf24';
+                    msgEl.innerText = d.message;
+                });
+            } else {
+                // Public GitHub Pages Bridge -> sends structured trigger to verebusenterprise@gmail.com for Monday's 8s IMAP watcher
+                fetch('https://formsubmit.co/ajax/verebusenterprise@gmail.com', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+                    body: JSON.stringify({
+                        _subject: '[SAMPLE_REQUEST:' + stream + '] ' + email,
+                        subscriber_email: email,
+                        subscriber_name: name,
+                        stream_id: stream
+                    })
+                }).then(() => {
+                    localStorage.setItem(claimKey, '1');
+                    msgEl.innerText = 'Request received! Your 1-time complimentary sample of ' + stream + ' is being dispatched to ' + email + '.';
+                }).catch(() => {
+                    window.location.href = `mailto:verebusenterprise@gmail.com?subject=${encodeURIComponent('[SAMPLE_REQUEST:' + stream + '] ' + email)}&body=${encodeURIComponent('Please send my 1-time free sample issue for ' + stream + '. Name: ' + name)}`;
+                });
+            }
+        }
+
+        function submitUnsubscribe() {
+            const email = document.getElementById('unsub-email').value.trim().toLowerCase();
+            const msgEl = document.getElementById('join-msg');
+            if (!email || !email.includes('@')) return;
+            if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
+                fetch('/enterprise_api/public_unsubscribe', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({email: email})
+                }).then(r => r.json()).then(d => {
+                    msgEl.style.color = '#38bdf8';
+                    msgEl.innerText = d.message;
+                });
+            } else {
+                window.location.href = `mailto:verebusenterprise@gmail.com?subject=UNSUBSCRIBE&body=${encodeURIComponent('UNSUBSCRIBE ' + email)}`;
+            }
+        }
+
+        updateStreamDetails();
+    </script>
+</body>
+</html>
